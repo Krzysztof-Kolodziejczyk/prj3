@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Study</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header, .footer {
+            width: 100%;
+            background-color: #004d61;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .main-content {
+            display: flex;
+            max-width: 1200px;
+            width: 100%;
+            margin: 2em 0;
+        }
+        .sidebar {
+            width: 20%;
+            padding: 1em;
+            background-color: #e3f2f9;
+            border-right: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        .sidebar h2 {
+            font-size: 1.2em;
+            margin-bottom: 1em;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar li {
+            margin-bottom: 0.5em;
+        }
+        .course-categories {
+            display: flex;
+            justify-content: space-around;
+            background-color: #e3f2f9;
+            padding: 1em;
+            margin-bottom: 2em;
+            width: 100%;
+            border-radius: 8px;
+        }
+        .course-categories a {
+            color: #004d61;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .course-categories a:hover {
+            text-decoration: underline;
+        }
+        .course-list {
+            display: flex;
+            flex-wrap: wrap;
+            width: 60%;
+            padding: 1em;
+            margin-right: 1em;
+        }
+        .course-item {
+            width: 30%;
+            margin: 1%;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .course-item img {
+            width: 100%;
+            height: auto;
+        }
+        .course-item h3 {
+            font-size: 1em;
+            margin: 0.5em;
+        }
+        .course-item p {
+            font-size: 0.9em;
+            margin: 0.5em;
+            color: #555;
+        }
+        .course-item:hover {
+            transform: scale(1.05);
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 1em;
+        }
+        .pagination a {
+            margin: 0 0.5em;
+            text-decoration: none;
+            color: #004d61;
+            font-weight: bold;
+        }
+        .search-bar {
+            width: 80%;
+            margin: 1em 0;
+            padding: 0.5em;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        .related-materials {
+            width: 20%;
+            padding: 1em;
+            background-color: #e3f2f9;
+            border-left: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        .related-material {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1em;
+            border: 1px solid #ccc;
+            padding: 0.5em;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+        .related-material img {
+            width: 60px;
+            height: 60px;
+            margin-right: 0.5em;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+        .related-material:hover img {
+            transform: scale(1.1);
+        }
+        .related-material div {
+            display: flex;
+            flex-direction: column;
+        }
+        .related-material h4 {
+            margin: 0;
+            font-size: 1em;
+        }
+        .related-material p {
+            margin: 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Easy Study</h1>
+        </div>
+
+        <div class="course-categories">
+            <a href="#">Algebra Liniowa</a>
+            <a href="#">Logika dla informatyków</a>
+            <a href="#">Struktury danych</a>
+            <a href="#">Kryptografia</a>
+        </div>
+
+        <input type="text" class="search-bar" placeholder="Search for courses...">
+
+        <div class="main-content">
+            <div class="sidebar">
+                <h2>Tematy</h2>
+                <ul>
+                    <li>Wektory</li>
+                    <li>Macierze</li>
+                    <li>Rzędy macierzy</li>
+                    <li>Jądra</li>
+                    <li>Odwzorowania liniowe</li>
+                    <li>Diagonalizacja macierzy</li>
+                </ul>
+            </div>
+
+            <div class="course-list">
+                <div class="course-item">
+                    <img src="assets/1.png" alt="Course 1">
+                    <h3>Równoważność</h3>
+                    <p>Wykład z równoważności</p>
+                </div>
+                <div class="course-item">
+                    <img src="assets/2.png" alt="Course 2">
+                    <h3>Eliminacja Gaussa</h3>
+                    <p>Wykład z eliminacji Gaussa</p>
+                </div>
+                <div class="course-item">
+                    <img src="assets/3.png" alt="Course 3">
+                    <h3>Układy równań</h3>
+                    <p>Wykład z układów równań</p>
+                </div>
+                <div class="course-item">
+                    <img src="assets/4.png" alt="Course 4">
+                    <h3>LU</h3>
+                    <p>Wykład z rozkładu LU</p>
+                </div>
+                <div class="course-item">
+                    <img src="assets/5.png" alt="Course 5">
+                    <h3>Notacja matematyczna</h3>
+                    <p>Wstęp do wykładu</p>
+                </div>
+                <div class="course-item">
+                    <img src="assets/6.png" alt="Course 6">
+                    <h3>Macierz Jordana</h3>
+                    <p>Wykład z rozkładu Jordana</p>
+                </div>
+            </div>
+
+            <div class="related-materials">
+                <h2>Podobne materiały</h2>
+                <div class="related-material">
+                    <img src="assets/1.png" alt="Related 1">
+                    <div>
+                        <h4>Teoria Grafów</h4>
+                        <p>UW</p>
+                    </div>
+                </div>
+                <div class="related-material">
+                    <img src="assets/2.png" alt="Related 2">
+                    <div>
+                        <h4>Algorytmy</h4>
+                        <p>AGH</p>
+                    </div>
+                </div>
+                <div class="related-material">
+                    <img src="assets/3.png" alt="Related 3">
+                    <div>
+                        <h4>Analiza Numeryczna</h4>
+                        <p>PK</p>
+                    </div>
+                </div>
+                <div class="related-material">
+                    <img src="assets/4.png" alt="Related 4">
+                    <div>
+                        <h4>Programowanie w Pythonie</h4>
+                        <p>UJ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 Easy Study. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
