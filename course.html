@@ -175,6 +175,56 @@
             font-size: 0.9em;
             color: #555;
         }
+        .feedback-section {
+            width: 60%; /* Dostosowanie szerokości sekcji */
+            margin: 2em auto; /* Wycentrowanie i dodanie marginesu */
+            padding: 1em; /* Padding dla lepszego odstępu od krawędzi */
+            background-color: #ffffff; /* Białe tło dla lepszej czytelności */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Subtelne cieniowanie dla efektu głębi */
+            border-radius: 10px; /* Zaokrąglenie rogów */
+            display: flex; /* Ustawienie elementów w rzędzie */
+            justify-content: space-between; /* Rozłożenie przestrzeni między elementami */
+            align-items: center; /* Wycentrowanie elementów w pionie */
+        }
+
+        .feedback-item {
+            flex: 1; /* Elastyczne rozciąganie elementu */
+            margin: 10px; /* Margines wokół każdego elementu */
+            padding: 20px; /* Dodatkowe padding wewnątrz */
+            background-color: #f0f0f0; /* Jasnoszare tło dla kontrastu */
+            border-radius: 8px; /* Zaokrąglenie rogów wewnętrznych elementów */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Lekkie cieniowanie dla wizualnej głębi */
+        }
+
+        .feedback-item h3 {
+            color: #004d61; /* Kolor nagłówków */
+            font-size: 1.2em; /* Większa czcionka dla nagłówków */
+        }
+
+        .feedback-item p {
+            font-size: 0.9em; /* Mniejsza czcionka dla paragrafów */
+            color: #333; /* Ciemnoszary kolor tekstu */
+            line-height: 1.6; /* Zwiększenie wysokości linii dla lepszej czytelności */
+            margin-top: 0.5em; /* Margines na górze każdego paragrafu */
+        }
+
+        .image-container {
+            width: 80%; /* Ograniczenie szerokości kontenera do 80% dla lepszego centrowania */
+            text-align: center;
+            margin: 20px auto; /* Automatyczne marginesy po obu stronach dla centrowania */
+            padding: 10px;
+            background-color: #f9f9f9; /* Tło dla lepszego kontrastu obrazu */
+            border: 1px solid #ccc; /* Dodanie ramki */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtelne cieniowanie dla efektu głębi */
+            border-radius: 8px; /* Zaokrąglenie rogów dla estetycznego wyglądu */
+        }
+
+        .image-container img {
+            max-width: 100%; /* Zapewnia, że obraz nie przekroczy szerokości kontenera */
+            height: auto; /* Zachowanie proporcji obrazu */
+            border-radius: 8px; /* Zaokrąglenie rogów obrazu dla spójności z kontenerem */
+        }
+
         .nav-container {
             position: absolute;
             top: 0;
@@ -200,6 +250,8 @@
             margin: 0 0.5em;
             font-size: 0.9em;
         }
+
+
     </style>
 </head>
 <body>
@@ -207,9 +259,9 @@
         <div class="header">
             <h1>Easy Study</h1>
             <div class="nav-container">
-                <div class="user-info"> 
+                <div class="user-info">
                     <img src="assets/user.png" alt="User Icon">
-                    <p>Marian Pazdzioch</p>
+                    <p>Marian Nowak</p>
                 </div>
                 <img src="assets/setting.png" alt="Settings Icon">
                 <img src="assets/dropdown.png" alt="Dropdown Icon">
@@ -235,53 +287,53 @@
             </div>
         </div>
 
-        <input type="text" class="search-bar" placeholder="Search for courses...">
+    <input type="text" class="search-bar" placeholder="Search for courses...">
 
-        <div class="main-content">
-            <div class="sidebar">
-                <h2>Tematy</h2>
-                <ul>
-                    <li>Wektory</li>
-                    <li>Macierze</li>
-                    <li>Rzędy macierzy</li>
-                    <li>Jądra</li>
-                    <li>Odwzorowania liniowe</li>
-                    <li>Diagonalizacja macierzy</li>
-                </ul>
-            </div>
+    <div class="main-content">
+        <div class="sidebar">
+            <h2>Tematy</h2>
+            <ul>
+                <li>Wektory</li>
+                <li>Macierze</li>
+                <li>Rzędy macierzy</li>
+                <li>Jądra</li>
+                <li>Odwzorowania liniowe</li>
+                <li>Diagonalizacja macierzy</li>
+            </ul>
+        </div>
 
-            <div class="course-list">
-                <div class="course-item">
-                    <img src="assets/1.png" alt="Course 1">
-                    <h3>Równoważność</h3>
-                    <p>Wykład z równoważności</p>
-                </div>
-                <div class="course-item">
-                    <img src="assets/2.png" alt="Course 2">
-                    <h3>Eliminacja Gaussa</h3>
-                    <p>Wykład z eliminacji Gaussa</p>
-                </div>
-                <div class="course-item">
-                    <img src="assets/3.png" alt="Course 3">
-                    <h3>Układy równań</h3>
-                    <p>Wykład z układów równań</p>
-                </div>
-                <div class="course-item">
-                    <img src="assets/4.png" alt="Course 4">
-                    <h3>LU</h3>
-                    <p>Wykład z rozkładu LU</p>
-                </div>
-                <div class="course-item">
-                    <img src="assets/5.png" alt="Course 5">
-                    <h3>Notacja matematyczna</h3>
-                    <p>Wstęp do wykładu</p>
-                </div>
-                <div class="course-item">
-                    <img src="assets/6.png" alt="Course 6">
-                    <h3>Macierz Jordana</h3>
-                    <p>Wykład z rozkładu Jordana</p>
-                </div>
+        <div class="course-list">
+            <div class="course-item">
+                <img src="assets/1.png" alt="Course 1">
+                <h3>Równoważność</h3>
+                <p>Wykład z równoważności</p>
             </div>
+            <div class="course-item">
+                <img src="assets/2.png" alt="Course 2">
+                <h3>Eliminacja Gaussa</h3>
+                <p>Wykład z eliminacji Gaussa</p>
+            </div>
+            <div class="course-item">
+                <img src="assets/3.png" alt="Course 3">
+                <h3>Układy równań</h3>
+                <p>Wykład z układów równań</p>
+            </div>
+            <div class="course-item">
+                <img src="assets/4.png" alt="Course 4">
+                <h3>LU</h3>
+                <p>Wykład z rozkładu LU</p>
+            </div>
+            <div class="course-item">
+                <img src="assets/5.png" alt="Course 5">
+                <h3>Notacja matematyczna</h3>
+                <p>Wstęp do wykładu</p>
+            </div>
+            <div class="course-item">
+                <img src="assets/6.png" alt="Course 6">
+                <h3>Macierz Jordana</h3>
+                <p>Wykład z rozkładu Jordana</p>
+            </div>
+        </div>
 
             <div class="related-materials">
                 <h2>Podobne materiały</h2>
@@ -316,8 +368,31 @@
             </div>
         </div>
 
+        <div class="pagination">
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+        </div>
+
+        <div class="feedback-section">
+            <div class="feedback-item">
+                <h3>Oceny prowadzących</h3>
+                <p>Prowadzący Dr Jan Kowalski: 4.5/5</p>
+                <p>Prowadzący Dr Anna Nowak: 4.8/5</p>
+            </div>
+            <div class="feedback-item">
+                <h3>Opinie studentów</h3>
+                <p>Jan K.: "Bardzo ciekawy kurs, świetnie prowadzony."</p>
+                <p>Anna Z.: "Wiele praktycznych przykładów, które pomogły mi zrozumieć materiał."</p>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="./assets/chart.png" alt="Informacyjny wykres">
+        </div>
+
         <div class="footer">
-            <p>&copy; 2023 Easy Study. All rights reserved.</p>
+            <p>&copy; 2024 Easy Study. All rights reserved.</p>
         </div>
     </div>
 </body>
