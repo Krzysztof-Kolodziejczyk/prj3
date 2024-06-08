@@ -22,6 +22,7 @@
             color: white;
             text-align: center;
             padding: 1em 0;
+            position: relative;
         }
         .main-content {
             display: flex;
@@ -53,15 +54,35 @@
             background-color: #e3f2f9;
             padding: 1em;
             margin-bottom: 2em;
-            width: 100%;
+            width: 80%;
             border-radius: 8px;
         }
-        .course-categories a {
+        .category-item {
+            background-color: white;
+            padding: 0.5em 1em;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            transition: box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .category-item:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .category-item img {
+            width: 40px; /* Ustawia stały rozmiar ikonki */
+            height: 40px;
+            margin-bottom: 0.5em;
+        }
+        .category-item a {
             color: #004d61;
             text-decoration: none;
             font-weight: bold;
+            font-size: 0.9em; /* Zmniejszona czcionka */
+            text-align: center;
         }
-        .course-categories a:hover {
+        .category-item a:hover {
             text-decoration: underline;
         }
         .course-list {
@@ -154,19 +175,64 @@
             font-size: 0.9em;
             color: #555;
         }
+        .nav-container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #d3d3d3;
+            padding: 1em;
+            border-radius: 0 0 0 8px;
+            color: rgb(0, 0, 0);
+            display: flex;
+            align-items: center;
+        }
+        .nav-container img {
+            width: 20px;
+            height: 20px;
+            margin-right: 0.5em;
+            cursor: pointer;
+        }
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+        .user-info p {
+            margin: 0 0.5em;
+            font-size: 0.9em;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1>Easy Study</h1>
+            <div class="nav-container">
+                <div class="user-info"> 
+                    <img src="assets/user.png" alt="User Icon">
+                    <p>Marian Pazdzioch</p>
+                </div>
+                <img src="assets/setting.png" alt="Settings Icon">
+                <img src="assets/dropdown.png" alt="Dropdown Icon">
+            </div>
         </div>
 
         <div class="course-categories">
-            <a href="#">Algebra Liniowa</a>
-            <a href="#">Logika dla informatyków</a>
-            <a href="#">Struktury danych</a>
-            <a href="#">Kryptografia</a>
+            <div class="category-item">
+                <img src="assets/algebra.png" alt="Algebra Icon">
+                <a href="#">Algebra Liniowa</a>
+            </div>
+            <div class="category-item">
+                <img src="assets/logic.png" alt="Logic Icon">
+                <a href="#">Logika dla informatyków</a>
+            </div>
+            <div class="category-item">
+                <img src="assets/ds.png" alt="Data Structures Icon">
+                <a href="#">Struktury danych</a>
+            </div>
+            <div class="category-item">
+                <img src="assets/crypt.png" alt="Cryptography Icon">
+                <a href="#">Kryptografia</a>
+            </div>
         </div>
 
         <input type="text" class="search-bar" placeholder="Search for courses...">
@@ -243,22 +309,15 @@
                 <div class="related-material">
                     <img src="assets/4.png" alt="Related 4">
                     <div>
-                        <h4>Programowanie w Pythonie</h4>
-                        <p>UJ</p>
+                        <h4>Programowanie w C++</h4>
+                        <p>PWr</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="pagination">
-            <a href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-        </div>
-
         <div class="footer">
-            <p>&copy; 2024 Easy Study. All rights reserved.</p>
+            <p>&copy; 2023 Easy Study. All rights reserved.</p>
         </div>
     </div>
 </body>
