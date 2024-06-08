@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Witaj w Aplikacji Edukacyjnej!</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+<div class="login-container">
+    <div class="header">
+        <h1>Witaj w Aplikacji Edukacyjnej!</h1>
+    </div>
+    <form action="./main.html" method="post" class="login-form">  <!-- Zmieniono action na ./main.html -->
+        <input type="email" id="email" name="email" placeholder="Email:" class="input-field">
+        <input type="password" id="password" name="password" placeholder="Hasło:" class="input-field">
+        <button type="submit" class="login-button">Zaloguj</button>
+        <button type="button" class="login-button login-button-alt" onclick="location.href='./main.html';">Zaloguj przez stronę uczelni</button>
+    </form>
+</div>
+</body>
+</html>
